@@ -179,16 +179,14 @@ async def scheduled_message_loop():
                 await channel.send(f'¡Feliz Cumpleaños {name}!')
             elif name == 'Angel':
                 await channel.send(f'{user_mention} ¡Feliz Cumpleaños {name}!')
+            elif name == 'Rahm':
+                await channel.send(f'{user_mention} Happy {ordinal(age)} Birthday!')
             else:
-                await channel.send(
-                    f'{user_mention} Happy {ordinal(age)} Birthday {name}!')
+                await channel.send(f'{user_mention} Happy {ordinal(age)} Birthday {name}!')
 
             if age >= 40:
-                await channel.send(
-                    'How the fuck do we still have this discord server what the hell.'
-                )
-                await channel.send(
-                    'Is China still paying for these message servers lol')
+                await channel.send('How the fuck do we still have this discord server what the hell.')
+                await channel.send('Is China still paying for these message servers lol')
 
             greeted_today.add(name)
 
