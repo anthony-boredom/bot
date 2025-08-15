@@ -176,16 +176,12 @@ async def scheduled_message_loop():
             age = now.year - info['year']
 
             if name == 'Nick':
-                await channel.send(f'¡Feliz cumpleaños {name}!')
+                await channel.send(f'¡Feliz Cumpleaños {name}!')
             elif name == 'Angel':
-                await channel.send(f'{user_mention} ¡Feliz cumpleaños {name}!')
+                await channel.send(f'{user_mention} ¡Feliz Cumpleaños {name}!')
             else:
                 await channel.send(
-                    f'{user_mention} Happy {ordinal(age)} birthday {name}!')
-
-            # if info['older']:
-            #     await channel.send(
-            #         f'Imagine being {age} years old lol you old fuck')
+                    f'{user_mention} Happy {ordinal(age)} Birthday {name}!')
 
             if age >= 40:
                 await channel.send(
@@ -193,8 +189,7 @@ async def scheduled_message_loop():
                 )
                 await channel.send(
                     'Is China still paying for these message servers lol')
-            # if age <= 18:
-            #     await channel.send(f'Watch out for diddy!')
+
             greeted_today.add(name)
 
     print(f'{bot.user.name} finished searching for session {now}!')
